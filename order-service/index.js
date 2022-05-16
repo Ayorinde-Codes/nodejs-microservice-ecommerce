@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT_ONE || 9090;
 const mongoose = require('mongoose');
 const amqp = require('amqplib');
-const Order = require('./order');
+const Order = require('./models/order');
 
 var connection, channel;
 
