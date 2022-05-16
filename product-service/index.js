@@ -5,7 +5,7 @@ const PORT = process.env.PORT_ONE || 8080;
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const amqp = require('amqplib');
-const Product = require('./product');
+const Product = require('./models/product');
 const isAuthenticated = require('../isAuthenticated');
 
 var connection, channel;

@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const User = require('./user');
+const User = require('./models/user');
 const app = express();
 const PORT = process.env.PORT_ONE || 7070;
 const mongoose = require('mongoose');
