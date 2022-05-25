@@ -3,7 +3,6 @@ const amqp = require('amqplib');
 var connection, channel, order;
 
 async function connect() {
-    
     const amqpServer = "amqp://localhost:5672";
     connection = await amqp.connect(amqpServer);
     channel = await connection.createChannel();
@@ -34,8 +33,7 @@ exports.buy = async(req, res) => {
     channel.sendToQueue("ORDER-SERVICE", Buffer.from(
         JSON.stringify({
                 products,
-                userEmail: req.user.email,
-            })
+                userEmail: req.user.email})
             )
         );
     channel.consume("PRODUCT-SERVICE", (data) => {
