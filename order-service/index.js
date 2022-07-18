@@ -35,7 +35,7 @@ function createOrder(products, userEmail) {
 
     newOrder.save();
 
-    return newOrder;
+    return newOrder; 
 }
     
 
